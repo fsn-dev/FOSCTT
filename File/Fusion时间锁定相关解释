@@ -16,6 +16,8 @@ By Yiixun
 
   在Fusion Network中（N,M）模型定义T1，T2一个时间期限即前段时间锁定，其中T1和T2分别表示资产（Assets）所有权的开始时间和结束时间，而N和M代表使用权的开始时间和结束时间即后段时间期限，原有的（N,M）模型变化为（M，N，T1，T2）。
 
+  ![image](https://github.com/Yiixun/FOSCTT/blob/master/File/1.png)
+  
   如图，当同一数字资产（N，M）的使用权和所有权具有连续性时，可以通过将两者合并为当前所有权来执行时间锁定操作即（N，M，current，t1）+（N，M，t1+1，∞）=（N，M，current，∞），这意味着用户在t+1的时间后获得（N，M）的未来所有权，获得未来价值（future value）。
 
   我们用以下说明Time lock to time lock的过程（笔者亲自测试），数量为40FSN，到达目标地址仍然是time-lock asset，时间锁定已经是可行的方案。
